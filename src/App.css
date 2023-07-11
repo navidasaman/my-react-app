@@ -1,0 +1,58 @@
+.App {
+  text-align: center;
+}
+
+.spiderImage {
+  height: 40vmin;
+  border-radius: 60px;
+  border:1px solid #61fb6b;
+  background-color: #404c41;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .spiderImage {
+    animation: spin infinite 7s linear;
+  }
+}
+
+.header {
+  background-color: #283430;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: whitesmoke;
+}
+
+.link {
+  color: #61fb6b;
+  text-decoration:none;
+  animation: jump infinite 2s linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+    translate: -50vw;
+    scale: 0.1;
+  }
+  to {
+    transform: rotate(360deg);
+    translate: 41vw;
+    scale: 1;
+  }
+}
+
+@keyframes jump {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.1;
+  }
+  100% {
+    scale: 1;
+  }
+}
